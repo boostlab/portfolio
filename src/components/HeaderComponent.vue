@@ -189,4 +189,98 @@ header nav ul li.blog a:before {
   content: "\f022";
 }
 
+@media screen and (max-width: 900px) {
+    header {
+        height:440px
+    }
+
+    header nav.container {
+        padding-top: 30px;
+        height: 70px;
+        line-height: 70px
+    }
+
+    header nav.container #logo {
+        float: none;
+        text-align: center;
+        display: table;
+        margin: 0 auto
+    }
+
+    header nav.container #logo:before {
+        height: 70px;
+        margin-top: 0
+    }
+
+    header nav.container ul {
+        float: none;
+        display: block;
+        text-align: center
+    }
+
+    header nav.container ul li a.active:after {
+        bottom: 6px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        height:450px
+    }
+
+    header nav.container ul {
+        padding-top: 19px
+    }
+
+    header nav ul li:first-child a {
+        margin-left: 0
+    }
+
+    header nav ul li a {
+        text-align: center;
+        font-size: 14px
+    }
+
+    header nav ul li a.active:after {
+        margin: 0 auto;
+        left: 0;
+        bottom: 8px!important
+    }
+
+    header nav ul li a:before {
+        display: block;
+        float: none;
+        margin: 0 auto 0px
+    }
+}
+
+@media screen and (max-width: 350px) {
+    header {
+        height:444px
+    }
+
+    header nav.container #logo {
+        font-size: 0;
+        text-align: center;
+        height: 70px;
+        display: block;
+        line-height: 70px
+    }
+
+    header nav.container #logo:before {
+        padding: 0;
+        margin: 0 auto;
+        float: none;
+        display: block
+    }
+
+    header nav ul li a {
+        line-height: 25px;
+        font-size: 0
+    }
+
+    header nav ul li a:after {
+        display: none!important
+    }
+}
 </style>

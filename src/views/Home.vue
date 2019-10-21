@@ -49,6 +49,40 @@
           <div class="latest-img"/>
           </a>
         </div>
+        <div class="main">
+          <div class="widget widget--featured">
+            <h3 class="widget-title">Featured Work</h3>
+            <ul class="featured-list">
+              <a href="/" target="_blank">
+                <li class="item">
+                  <div class="item-text">
+                    <h3 class="item-title">Project Name</h3>
+                    <span class="item-tags white-line">Project Description</span>
+                  </div>
+                  <div class="item-img" style="background-image:url(/images/logo.png)"></div>
+                </li>
+              </a>
+              <a href="/" target="_blank">
+                <li class="item">
+                  <div class="item-text">
+                    <h3 class="item-title">Project Name</h3>
+                    <span class="item-tags white-line">Project Description</span>
+                  </div>
+                  <div class="item-img" style="background-image:url(/images/logo.png)"></div>
+                </li>
+              </a>
+              <a href="/" target="_blank">
+                <li class="item">
+                  <div class="item-text">
+                    <h3 class="item-title">Project Name</h3>
+                    <span class="item-tags white-line">Project Description</span>
+                  </div>
+                  <div class="item-img" style="background-image:url(/images/logo.png)"></div>
+                </li>
+              </a>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <FooterComponent/>
@@ -285,6 +319,86 @@ export default {
     }
 }
 
+.widget--featured {
+    padding-bottom: 0
+}
+
+.widget--featured a {
+    color: white
+}
+
+.widget--featured .featured-list {
+    text-align: right
+}
+
+.widget--featured .featured-list .item {
+    display: inline-block;
+    margin-right: -85px;
+    margin-bottom: 50px
+}
+
+.widget--featured .featured-list .item .item-text {
+    vertical-align: text-bottom;
+    display: inline-block;
+    text-align: right;
+    height: 238px;
+    -webkit-transition: .25s;
+    -o-transition: .25s;
+    transition: .25s
+}
+
+.widget--featured .featured-list .item .item-text .item-title {
+    margin-top: 118px;
+    color: #3498db;
+    line-height: 28px;
+    font-size: 22px;
+    -webkit-transition: .25s;
+    -o-transition: .25s;
+    transition: .25s;
+    font-weight: bold
+}
+
+.widget--featured .featured-list .item .item-text .item-tags {
+    font-weight: bold;
+    color: #777;
+    font-size: 12px
+}
+
+.widget--featured .featured-list .item .item-text .item-tags:after {
+    width: 52px;
+    margin-left: auto
+}
+
+.widget--featured .featured-list .item .item-img {
+    width: 390px;
+    height: 238px;
+    background: #ccc no-repeat center / cover;
+    float: right;
+    margin-left: 50px;
+    display: inline-block;
+    border-radius: 10px;
+    -webkit-box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.15);
+    -webkit-transition: .25s;
+    -o-transition: .25s;
+    transition: .25s
+}
+
+.widget--featured .featured-list .item:hover .item-text .item-title {
+    color: white
+}
+
+.widget--featured .featured-list .item:hover .item-text .item-tags:after {
+    width: 4px;
+    border-radius: 50%
+}
+
+.widget--featured .featured-list .item:hover .item-img {
+    margin-left: 30px;
+    border-radius: 20px
+}
+
+
 .widget--latest:after {
     content: "\f35a";
     font-family: "Font Awesome 5 Free";
@@ -346,6 +460,5 @@ export default {
 .widget.wave:hover {
     background-size: 1550px auto
 }
-
 
 </style>
