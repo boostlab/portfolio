@@ -1,7 +1,47 @@
 <template>
   <div>
     <HeaderComponent/>
-    <div>
+    <div id="content" class="container">
+      <div id="hero">
+        <div class="widget widget-home-ad link">
+          <div class="gradient"/>
+          <div class="hero-text stick-left">
+            <h3 class="hero-title white-line">
+              Hero heading text
+            </h3>
+            <span class="hero-desc">
+              Hero description text.
+            </span>
+          </div>
+          <div class="hero-img"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="sidebar">
+          <div class="widget widget--about">
+            <h3 class="widget-title">Hello!</h3>
+            <span class="about-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit
+              esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum.
+              <br><br>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum.
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
     <FooterComponent/>
   </div>
@@ -20,3 +60,207 @@ export default {
   },
 };
 </script>
+
+<style scoped lang="scss">
+#hero {
+    -webkit-transition: .25s;
+    -o-transition: .25s;
+    transition: .25s;
+    margin-top: -250px;
+    margin-bottom: 50px
+}
+
+#hero .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch
+}
+
+#hero .row .widget {
+    -webkit-box-flex: 1!important;
+    -ms-flex: 1!important;
+    flex: 1!important;
+    -ms-flex-positive: 1;
+    flex-grow: 1
+}
+
+#hero .row .widget.smaller {
+    padding: 50px;
+    max-width: calc(40% - 50px);
+    margin: 0 auto
+}
+
+#hero .row .widget.smaller:first-child {
+    margin-right: 50px
+}
+
+#hero .row .widget.smaller:last-child {
+    margin-left: 50px
+}
+
+@media (max-width: 1100px) {
+    #hero .row .widget.smaller:last-child {
+        margin-left:20px
+    }
+}
+
+#hero .hero-subtitle {
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    margin: 4px 0 30px;
+    display: block
+}
+
+#hero .widget {
+    position: relative;
+    min-height: 345px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background:#3498db
+}
+
+#hero .gradient {
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+#hero .gradient:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    opacity: 0;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    background: transparent;
+    background: -moz-linear-gradient(top, transparent 0%, #2980b9 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent),
+      color-stop(100%, #2980b9));
+    background: -webkit-linear-gradient(top, transparent 0%, #2980b9 100%);
+    background: -o-linear-gradient(top, transparent 0%, #2980b9 100%);
+    background: -ms-linear-gradient(top, transparent 0%, #2980b9 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#2980b9));
+    background: linear-gradient(to bottom, transparent 0%, #2980b9 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+    border-radius: 8px
+}
+
+#hero .widget.link:hover .gradient:after {
+    opacity: 1;
+    height: 100%
+}
+
+#hero .widget.link:hover .hero-title:after {
+    width: 6px;
+    border-radius: 100%;
+    left: calc(100% - 5px)
+}
+
+#hero .widget.text-center {
+    text-align: center
+}
+
+#hero .widget.text-center .hero-title {
+    margin: 0 auto
+}
+
+#hero .hero-text {
+    display: inline-block
+}
+
+#hero .hero-text.stick-left {
+    height: 100%;
+    width: 50%
+}
+
+#hero .hero-text .hero-title {
+    display: table;
+    font-size: 30px;
+    font-weight: bold
+}
+
+#hero .hero-text .hero-title.mini {
+    max-width: 300px;
+    line-height: 30px;
+    font-size: 26px
+}
+
+#hero .hero-text .hero-desc {
+    position: absolute;
+    color: #fff;
+    bottom: 60px;
+    left: 70px;
+    width: calc(100% - 750px)
+}
+
+#hero .hero-text .hero-desc b {
+    font-weight: bold;
+    color: #fff
+}
+
+#hero .hero-text .hero-paragraph {
+    color: #fff;
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 10px;
+    text-align: justify
+}
+
+#hero .hero-text .hero-paragraph b {
+    font-weight: bold;
+    color: #fff
+}
+
+#hero .hero-text .hero-paragraph:first-of-type {
+    margin-top: 40px
+}
+
+#hero .hero-img {
+    background: #444;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -15px;
+    right: 55px;
+    display: block;
+    width: 440px;
+    height: 265px;
+    -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    -webkit-transition: .25s;
+    -o-transition: .25s;
+    transition: .25s
+}
+
+#hero .hero-img:after,#hero .hero-img:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    border-radius: 10px 10px 0 0;
+    top: -12px;
+    height: 12px;
+    background: rgba(0, 0, 0, 0.075)
+}
+
+#hero .hero-img:after {
+    top: -24px;
+    background: rgba(0, 0, 0, 0.025);
+    width: 80%;
+    left: 10%
+}
+
+</style>
