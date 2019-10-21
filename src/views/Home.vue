@@ -40,6 +40,14 @@
               officia deserunt mollit anim id est laborum.
             </span>
           </div>
+          <a href="/" target="_blank" class="widget wave link widget--latest">
+          <h3 class="widget-title">Latest</h3>
+          <span class="latest-details">
+            <b>Project Name</b>
+            Project Description
+          </span>
+          <div class="latest-img"/>
+          </a>
         </div>
       </div>
     </div>
@@ -262,5 +270,82 @@ export default {
     width: 80%;
     left: 10%
 }
+
+.widget--latest {
+    margin-top: 50px;
+    padding-bottom: 245px;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s
+}
+
+@media (max-width: 1100px) {
+    .widget--latest {
+        margin-top:20px
+    }
+}
+
+.widget--latest:after {
+    content: "\f35a";
+    font-family: "Font Awesome 5 Free";
+    font-size: 22px;
+    position: absolute;
+    color: rgba(255, 255, 255, 0.75);
+    opacity: 0;
+    -webkit-transition: .25s;
+    -o-transition: .25s;
+    transition: .25s;
+    top: 25px;
+    right: 25px
+}
+
+.widget--latest:hover:after {
+    opacity: 1
+}
+
+.widget--latest:hover .latest-details {
+    color: white
+}
+
+.widget--latest .latest-details {
+    display: block;
+    text-align: center;
+    font-size: 11px;
+    color: #999;
+    margin: 50px 0 10px;
+    line-height: 20px;
+    -webkit-transition: color .25s;
+    -o-transition: color .25s;
+    transition: color .25s
+}
+
+.widget--latest .latest-details b {
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    display: block
+}
+
+.widget--latest .latest-img {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 289px;
+    height: 220px;
+    background: #999 no-repeat center / cover;
+    border-radius: 10px
+}
+
+
+.widget.wave {
+    background: #373737 url(/images/wave.svg) no-repeat bottom center/105% auto
+}
+
+.widget.wave:hover {
+    background-size: 1550px auto
+}
+
 
 </style>

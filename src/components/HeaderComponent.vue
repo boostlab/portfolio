@@ -83,7 +83,6 @@ header nav #logo {
     letter-spacing: 5px;
     position: relative;
     text-shadow: 0 3px 1px rgba(0, 0, 0, 0.2);
-    background: url("/logo.png")
 }
 
 header nav #logo:before {
@@ -92,10 +91,11 @@ header nav #logo:before {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin-right: 20px;
-    margin-top: 2px;
+    margin-top: 4px;
     height: 150px;
     float: left;
     width: 20px;
+    background: url("/images/logo.png") no-repeat center/100% auto;
     -webkit-transition: .25s;
     -o-transition: .25s;
     transition: .25s;
